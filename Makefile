@@ -1,8 +1,8 @@
 FINALPACKAGE=1
 
 # INSTALL_TARGET_PROCESSES = SpringBoard
-ARCHS = arm64
-# THEOS_PACKAGE_SCHEME=roothide
+ARCHS = arm64e
+THEOS_PACKAGE_SCHEME=rootless
 TARGET = iphone:clang:latest:15.0
 include $(THEOS)/makefiles/common.mk
 
@@ -17,6 +17,6 @@ autoflex_FILES = Tweak.x $(FLEX_FILES)
 autoflex_CFLAGS = -Isrc -fobjc-arc -Wno-deprecated-declarations -Wno-strict-prototypes -Wno-unsupported-availability-guard -Wno-unused-but-set-variable
 
 autoflex_FRAMEWORKS = UIKit CoreGraphics QuartzCore ImageIO WebKit Security SceneKit AVFoundation UserNotifications
-autoflex_LDFLAGS += -lz -lsqlite3
+autoflex_LDFLAGS += -lz -lsqlite3 -Wl,-rpath,/cores -Wl,-rpath,/var/jb/Library/Frameworks
 
 include $(THEOS_MAKE_PATH)/tweak.mk

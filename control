@@ -1,9 +1,9 @@
-Package: com.hopeless.autoflex
+Package: com.stark.autoflex
 Name: autoflex
 Version: 0.0.1
-Architecture: iphoneos-arm
-Description: An awesome MobileSubstrate tweak!
-Maintainer: hopeless
-Author: hopeless
+Architecture: iphoneos-arm64e
+Description: An awesome Flex auto injection tweak!
+Maintainer: Stark
+Author: Stark
 Section: Tweaks
-Depends: mobilesubstrate (>= 0.9.5000)
+Depends: firmware (>= 15.0)
